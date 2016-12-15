@@ -61,7 +61,7 @@ li {
 
 .selectedCharacter {
   padding: 4px;
-  color: white;
+  color: #ccc;
 }"><input type="hidden" name="entries[styles.css][encoding]" value="utf8"><input type="hidden" name="entries[app/app.component.html][content]" value="<!-- 
   TODO: Write out the filmTitle inside of the h1 tag below
 -->
@@ -112,9 +112,9 @@ li {
      <!-- Polyfill(s) for older browsers -->
     <script src=&quot;//unpkg.com/core-js/client/shim.min.js&quot;></script>
 
-    <script src=&quot;//unpkg.com/zone.js@0.6.25?main=browser&quot;></script>
+    <script src=&quot;//unpkg.com/zone.js@0.6.26?main=browser&quot;></script>
     <script src=&quot;//unpkg.com/reflect-metadata@0.1.8&quot;></script>
-    <script src=&quot;//unpkg.com/systemjs@0.19.38/dist/system.src.js&quot;></script>
+    <script src=&quot;//unpkg.com/systemjs@0.19.40/dist/system.src.js&quot;></script>
  
     <script src=&quot;systemjs.config.js&quot;></script>
     <script>
@@ -141,15 +141,22 @@ This example provides a look at Angular 2 data binding syntax in templates.
 
 1. Open **app/app.component.ts**. Take note of the properties it provides.
 
-2. Perform the TODO task shown in the file.
+2. Complete the TODO task shown in the file.
 
-3. Open **app/app.component.html** and perform the TODO tasks.
+3. Open **app/app.component.html** and complete the TODO tasks.
 
 4. Press the Run button.
 
 5. You should see the selected character displayed in the page
-   and should be able to click on a character in the list and see the 
-   selected character change."><input type="hidden" name="entries[README.md][encoding]" value="utf8"><input type="hidden" name="tags[0]" value="angular2"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="http"><input type="hidden" name="tags[3]" value="observables"><input type="hidden" name="tags[4]" value="rxjx"><input type="hidden" name="tags[5]" value="angular 2"><input type="hidden" name="title" value="Angular 2 Example - Angular 2 Data Binding Lab Solution"><input type="hidden" name="source[type]" value="Angular 2 Data Binding Lab Solution"><input type="hidden" name="source[url]" value="https://angular.io"><input type="hidden" name="entries[systemjs.config.js][content]" value="/**
+   and should be able to click on a character in the list and see the
+   selected character change.
+
+## Bonus
+
+1. Remove the code that defaults the selectedCharacter in the component
+
+2. Notice how the selected character is no longer displayed in the running app. Make that DIV disappear if there is no selectedCharacter (hint: use *ngIf)
+"><input type="hidden" name="entries[README.md][encoding]" value="utf8"><input type="hidden" name="tags[0]" value="angular2"><input type="hidden" name="tags[1]" value="example"><input type="hidden" name="tags[2]" value="http"><input type="hidden" name="tags[3]" value="observables"><input type="hidden" name="tags[4]" value="rxjx"><input type="hidden" name="tags[5]" value="angular 2"><input type="hidden" name="title" value="Angular 2 Example - Angular 2 Data Binding Lab Solution"><input type="hidden" name="source[type]" value="Angular 2 Data Binding Lab Solution"><input type="hidden" name="source[url]" value="https://angular.io"><input type="hidden" name="entries[systemjs.config.js][content]" value="/**
  * PLUNKER VERSION
  * (based on systemjs.config.js in angular.io)
  * System configuration for Angular 2 samples
@@ -157,8 +164,8 @@ This example provides a look at Angular 2 data binding syntax in templates.
  */
 (function (global) {
   
-  var ng2Version = '@2.0.1',
-      ng2RouterVersion = '@3.0.1';
+  var ng2Version = '@2.1.2',
+      ng2RouterVersion = '@3.1.2';
   
   System.config({
     // DEMO ONLY! REAL CODE SHOULD NOT TRANSPILE IN THE BROWSER
@@ -194,7 +201,7 @@ This example provides a look at Angular 2 data binding syntax in templates.
       'rxjs':                       'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
       'ts':                         'npm:plugin-typescript@5.1.2/lib/plugin.js',
-      'typescript':                 'npm:typescript@2.0.3/lib/typescript.js',
+      'typescript':                 'npm:typescript@2.0.6/lib/typescript.js',
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
